@@ -109,6 +109,18 @@ AI-Interview-Prep/
 └── LICENSE
 ```
 
+## 🏗️ Architecture
+ 
+```mermaid
+flowchart LR
+    U([👤 User]) --> F["⚛️ React Frontend<br/>(Vite + Tailwind)"]
+    F -- "REST + JWT" --> B["🟢 Express API"]
+    B --> D[("🍃 MongoDB")]
+    B -- "Prompts" --> G["✨ Google Gemini"]
+    G -- "Questions & Explanations" --> B
+    B --> F
+```
+
 ## Getting Started
 
 ### Prerequisites
